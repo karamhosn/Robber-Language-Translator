@@ -8,7 +8,7 @@ Model::Model(){
 
 //default destructor
 Model::~Model(){
-    //nothing to destruct
+    //nothing to destruct :D
 }
 
 //translateSingleConsonant method

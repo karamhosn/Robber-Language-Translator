@@ -5,31 +5,32 @@
 
 //default constructor
 FileProcessor::FileProcessor(){
-    cout << "File processor constructor called" << endl;
+    //nothing to construct :D
 }
 
 //default destructor
 FileProcessor::~FileProcessor(){
-    cout << "File processor destructor called" << endl;
+    //nothing to destruct :D
 }
 
 //processFile method
-void FileProcessor::processFile(const std::string& inputFile, const std::string& outputFile){
+void FileProcessor::processFile(const string& inputFile, const string& outputFile){
 
     //open input file
-    std::ifstream inFile(inputFile);
+    ifstream inFile(inputFile);
  
     //check if file is open
     if (!inFile.is_open()) {
         cout << "Error: Unable to open input file." << endl;
+        cout << endl;
         return;
     }
 
     //read content from input file
     //and save to string englishText
-    std::stringstream buffer;
+    stringstream buffer;
     buffer << inFile.rdbuf();
-    std::string englishText = buffer.str();
+    string englishText = buffer.str();
 
     //close input file
     inFile.close();
@@ -37,11 +38,11 @@ void FileProcessor::processFile(const std::string& inputFile, const std::string&
     //translate englishText to robber language
     //and save to string robberTranslation
     Translator translatorObject;
-    std::string robberTranslation;
+    string robberTranslation;
     robberTranslation = translatorObject.translateEnglishSentence(englishText);
 
     //open html output file 
-    std::ofstream outFile(outputFile);
+    ofstream outFile(outputFile);
     if (!outFile.is_open()) {
         cout << "Error: Unable to open output file." << endl;
         return;

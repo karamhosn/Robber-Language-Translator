@@ -16,7 +16,7 @@ class FileProcessor{
         ~FileProcessor();
 
         //core function
-        void processFile(const std::string& inputFile, const std::string& outputFile); //processFile method
+        void processFile(const string& inputFile, const string& outputFile); //processFile method
 
     private:
         //no need for private member variables
