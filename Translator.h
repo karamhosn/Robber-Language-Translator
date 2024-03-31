@@ -15,12 +15,12 @@ class Translator{
         ~Translator(); //default destructor
 
         //core functions
-        std::string translateEnglishWord(std::string& englishWord); //translates english word to robber language
-        std::string translateEnglishSentence(std::string& englishSentence); //translates english sentence to robber language
+        string translateEnglishWord(string& englishWord); //translates english word to robber language
+        string translateEnglishSentence(string& englishSentence); //translates english sentence to robber language
 
     private:
-        std::string robberEnglishWord; //robbler language word
-        std::string robberEnglishSentence; //robber language sentence
+        string robberEnglishWord; //robbler language word
+        string robberEnglishSentence; //robber language sentence
 
 };
 

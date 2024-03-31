@@ -14,7 +14,8 @@ class Model{
         ~Model(); //default destructor
 
         //core functions
-        std::string translateSingleConsonant(char consonant); //translates consonant in Robber Language (preserves capitals, returns string)
+        std::string translateSingleConsonant(char consonant); //translates consonant in Robber Language 
+                                                              //(preserves capitals, returns string)
         std::string translateSingleVowel(char vowel); //translates vowel in Robber Language (preserves capitals, returns string)
 
     private:

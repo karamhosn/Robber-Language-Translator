@@ -4,8 +4,8 @@
 
 //default constructor
 Translator::Translator(){
-    std::string robberEnglishWord = ""; 
-    std::string robberEnglishSentence = "";
+    string robberEnglishWord = ""; 
+    string robberEnglishSentence = "";
 }
 
 
@@ -16,7 +16,7 @@ Translator::~Translator(){
 
 
 //translateEnglishWord method
-std::string Translator::translateEnglishWord(std::string& englishWord){
+string Translator::translateEnglishWord(string& englishWord){
 
     //initialize robber language word for each time method is called
     robberEnglishWord = "";
@@ -52,21 +52,21 @@ std::string Translator::translateEnglishWord(std::string& englishWord){
 
 
 //translateEnglishSentence method
-std::string Translator::translateEnglishSentence(std::string& englishSentence){
+string Translator::translateEnglishSentence(string& englishSentence){
 
     Translator translatorObject; //create translator object
     robberEnglishSentence = "";
-    std::string englishWord = ""; //initialize english word string
+    string englishWord = ""; //initialize english word string
 
     //for loop to iterate through english sentence
     for (int i = 0; i < englishSentence.length(); ++i){
 
 
         //if character is a letter concatonate to englishWord
-	    if (std::isalpha(englishSentence[i])) {
+	    if (isalpha(englishSentence[i])) {
 
             char c = englishSentence[i]; //create char c
-            std::string str(1, c); //convert c to string type
+            string str(1, c); //convert c to string type
 		    englishWord += c; //add c to english word
 
 	    }
@@ -78,7 +78,7 @@ std::string Translator::translateEnglishSentence(std::string& englishSentence){
 		
             //create char c and convert to string (represents space or punctuation found)
 		    char c = englishSentence[i]; 
-            std::string str(1, c);
+            string str(1, c);
 
             //add c to robber sentence 
             robberEnglishSentence += c;
